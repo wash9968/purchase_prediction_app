@@ -57,8 +57,12 @@ input_data = pd.DataFrame([{
   'ProductPitched': ProductPitched
 }])
 
+# Set the classification threshold
+classification_threshold = 0.45
+
 # Predict button
 if st.button("Predict"):
-    prediction = (model.predict_proba(input_data)[0, 1]).astype(int)
+    prediction_proba = model.predict_proba(input_data)[0, 1]
+    prediction = (prediction_proba >= classification_threshold).astype(int)
     result = "take product" if prediction == 1 else "not take product"
     st.write(f"Based on the information provided, the customer is likely to {result}.")
