@@ -26,7 +26,7 @@ NumberOfChildrenVisiting = st.number_input("Number of children below age 5 accom
 MonthlyIncome = st.number_input("Gross monthly income of the customer", value=17000)
 PitchSatisfactionScore = st.number_input("Score indicating the customer's satisfaction with the sales pitch", min_value=1, max_value=5, value = 3)
 NumberOfFollowups = st.number_input("Total number of follow-ups by the salesperson after the sales pitch", min_value=1, value=3)
-DurationOfPitch = st.number_input("Total number of follow-ups by the salesperson after the sales pitch", min_value=1, value=12)
+DurationOfPitch = st.number_input("Duration of the sales pitch delivered to the customer", min_value=1, value=12)
 TypeofContact = st.selectbox("The method by which the customer was contacted (Company Invited or Self Inquiry)", ["Company Invited", "Self Inquiry"], index=1)
 Occupation = st.selectbox("Customer's occupation (e.g., Salaried, Freelancer)", ["Salaried", "FreeLancer", "Small Business", "Large Business"], index=0)
 Gender = st.selectbox("Gender of the customer (Male, Female)", ["Male", "Female"], index=0)
